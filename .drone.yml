@@ -11,3 +11,13 @@ steps:
         - latest
         - build.${DRONE_BUILD_NUMBER}
       dry_run: true
+      auto_tag: true
+
+  - name: Release
+    image: node
+    commands:
+      - yarn install
+      - yarn semantic-release
+    environment:
+      GH_TOKEN:
+        from_secret: GH_TOKEN
