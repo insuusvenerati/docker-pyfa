@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "docker build -t pyfa .",
+    "dev": "docker run -it --rm -e DISPLAY=$DISPLAY --entrypoint /bin/bash -u root -v /tmp/.X11-unix:/tmp/.X11-unix pyfa"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
