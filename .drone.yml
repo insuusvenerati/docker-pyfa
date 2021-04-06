@@ -11,3 +11,4 @@ steps:
         - latest
         - build.${DRONE_BUILD_NUMBER}
       dry_run: true
+      auto_tag: true

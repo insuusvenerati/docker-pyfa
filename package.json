@@ -1,0 +1,53 @@
+{
+  "name": "docker-pyfa",
+  "version": "0.0.0-development",
+  "description": "Run Pyfa(Python fitting Assistant) from a docker container on any system with X11",
+  "main": "index.js",
+  "repository": "git@github.com:insuusvenerati/docker-pyfa.git",
+  "author": "Sean Norwood <norwood.sean@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "semantic-release": "^17.4.2"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "develop",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.MD"
+        }
+      ],
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.MD"
+          ],
+          "message": "chore(release): ${nextRelease.version} [CI SKIP]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}
