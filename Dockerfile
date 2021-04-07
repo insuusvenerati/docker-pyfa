@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.9.2-slim-buster
 
 # COPY . /opt/app
 RUN git clone https://github.com/pyfa-org/Pyfa /opt/app
