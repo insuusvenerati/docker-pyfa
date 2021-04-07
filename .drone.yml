@@ -10,8 +10,12 @@ steps:
       tags:
         - latest
         - build.${DRONE_BUILD_NUMBER}
-      dry_run: true
+      dry_run: false
       auto_tag: true
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
 
   # - name: Shellcheck
   #   image: koalaman/shellcheck:stable
