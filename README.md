@@ -3,13 +3,13 @@
 Run Pyfa(Python fitting Assistant) from a docker container on any system with X11
 
 - [Pyfa in Docker](#pyfa-in-docker)
-	- [Get started](#get-started)
-		- [Install necessary dependencies](#install-necessary-dependencies)
-			- [Get Docker](#get-docker)
-		- [Clone the repo and Build the image](#clone-the-repo-and-build-the-image)
-		- [Bootstrap the pyfa container](#bootstrap-the-pyfa-container)
-		- [Launch Pyfa](#launch-pyfa)
-		- [Known issues](#known-issues)
+  - [Get started](#get-started)
+    - [Install necessary dependencies](#install-necessary-dependencies)
+      - [Get Docker](#get-docker)
+    - [Clone the repo and Build the image](#clone-the-repo-and-build-the-image)
+    - [Bootstrap the pyfa container](#bootstrap-the-pyfa-container)
+    - [Launch Pyfa](#launch-pyfa)
+    - [Known issues](#known-issues)
 
 ## Get started
 
@@ -54,4 +54,5 @@ pyfa
 
 ### Known issues
 
-There is a warning about not being able to set locale.
+- There is a warning about not being able to set locale.
+- This thing eats up a ton of space because it's building from source. Any suggestions on optimization are appreciated.
