@@ -13,10 +13,10 @@ steps:
       dry_run: true
       auto_tag: true
 
-  - name: Shellcheck
-    image: koalaman/shellcheck:stable
-    commands:
-      - shellcheck scripts/*
+  # - name: Shellcheck
+  #   image: koalaman/shellcheck:stable
+  #   commands:
+  #     - shellcheck scripts/*
 
   - name: Release
     image: node
@@ -26,3 +26,5 @@ steps:
     environment:
       GH_TOKEN:
         from_secret: GH_TOKEN
+    depends_on:
+      - "Build image"

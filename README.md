@@ -3,12 +3,13 @@
 Run Pyfa(Python fitting Assistant) from a docker container on any system with X11
 
 - [Pyfa in Docker](#pyfa-in-docker)
-  - [Get started](#get-started)
-    - [Install necessary dependencies](#install-necessary-dependencies)
-      - [Get Docker](#get-docker)
-    - [Build the image](#build-the-image)
-    - [Bootstrap the pyfa container](#bootstrap-the-pyfa-container)
-    - [Launch Pyfa](#launch-pyfa)
+	- [Get started](#get-started)
+		- [Install necessary dependencies](#install-necessary-dependencies)
+			- [Get Docker](#get-docker)
+		- [Clone the repo and Build the image](#clone-the-repo-and-build-the-image)
+		- [Bootstrap the pyfa container](#bootstrap-the-pyfa-container)
+		- [Launch Pyfa](#launch-pyfa)
+		- [Known issues](#known-issues)
 
 ## Get started
 
@@ -22,9 +23,10 @@ Run Pyfa(Python fitting Assistant) from a docker container on any system with X1
 curl -fsSL https://get.docker.com | sudo sh
 ```
 
-### Build the image
+### Clone the repo and Build the image
 
 ```bash
+git clone insuusvenerati/docker-pyfa
 docker build -t pyfa .
 ```
 
@@ -49,3 +51,7 @@ docker tag stiforr/pyfa pyfa
 sudo cp scripts/pyfa /usr/local/bin/pyfa
 pyfa
 ```
+
+### Known issues
+
+There is a warning about not being able to set locale.
