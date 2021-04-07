@@ -13,6 +13,11 @@ steps:
       dry_run: true
       auto_tag: true
 
+  - name: Shellcheck
+    image: koalaman/shellcheck:stable
+    commands:
+      - shellcheck scripts/*
+
   - name: Release
     image: node
     commands:

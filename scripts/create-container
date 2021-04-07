@@ -1,0 +1,16 @@
+#!/bin/bash
+
+run() {
+	docker run -it --name pyfa -e DISPLAY="$DISPLAY" -v data:/home/pyfa -v /tmp/.X11-unix:/tmp/.X11-unix pyfa >/dev/null
+}
+
+if run; then
+	echo ""
+	echo "Container created as pyfa"
+	exit 0
+else
+	echo ""
+	echo "Issue creating the container. It's probably already created. See the above error message"
+	echo ""
+	exit 1
+fi
