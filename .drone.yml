@@ -10,7 +10,7 @@ steps:
       tags:
         - latest
         - build.${DRONE_BUILD_NUMBER}
-      dry_run: true
+      dry_run: false
       auto_tag: true
       username:
         from_secret: docker_username
@@ -22,10 +22,10 @@ steps:
   #   commands:
   #     - shellcheck scripts/*
 
-  - name: Docker image size
-    image: wagoodman/dive
-    commands:
-      - dive --highestUserWastedPercent "0.75" --lowestEfficiency "0.75" stiforr/pyfa:latest
+  # - name: Docker image size
+  #   image: wagoodman/dive
+  #   commands:
+  #     - dive --highestUserWastedPercent "0.75" --lowestEfficiency "0.75" stiforr/pyfa:latest
 
   - name: Release
     image: node
