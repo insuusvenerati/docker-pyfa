@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/insuusvenerati/docker-pyfa/compare/v1.0.0...v1.1.0) (2021-04-17)
+
+
+### Features
+
+* greatly reduces image size ([9447611](https://github.com/insuusvenerati/docker-pyfa/commit/9447611d2022233faeb5b9a4da1e9f5e109aa9e2))
+
 # 1.0.0 (2021-04-06)
 
 
